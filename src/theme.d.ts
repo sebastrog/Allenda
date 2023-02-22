@@ -1,9 +1,16 @@
 import { ThemeOptions } from '@mui/material/styles'
-
 declare module '@mui/material/styles' {
+  interface Theme {
+    backgrounds: {
+      primary: string,
+      secondary: string,
+    }
+  }
+
   interface ThemeOptions {
-    status: {
-      danger: React.CSSProperties['color']
+    backgrounds: {
+      primary: React.CSSProperties['color'],
+      secondary: React.CSSProperties['color'],
     }
   }
 }
